@@ -1,0 +1,3 @@
+#!/bin/bash
+(time %c)>& /home/ealatet/my_project/systimer
+/home/ealatet/my_project/./tmux_right_script_session_time | cut -f 3 -d ' ' | cut -f 1 -d '.'

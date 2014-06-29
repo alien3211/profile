@@ -1,0 +1,19 @@
+#!/usr/bin/perl -w
+$data = `uptime`;
+if($data =~ m/(days|dni)/)
+{
+    $file_up = system("/home/alan/my_project/./tmux_right_script");
+}
+else
+{
+    if($data =~ m/min/)
+    {
+        $file_up = system("/home/alan/my_project/./no_min");
+    }
+    else
+    {
+        $file_up = system("/home/alan/my_project/./no_deys");
+    }
+}
+$file_up =~ 's/(\d\d:\d\d)*/$1/';
+print $file_up; 
