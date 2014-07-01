@@ -71,3 +71,23 @@ let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 let g:lt_height = 10
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+
+" Function
+:highlight BlackOnGreen ctermfg=black ctermbg=green
+function! HLNext (blinktime)
+	let [bufnum, lnum, col, off] = getpos('.')
+	let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+	let target_pat = '\c\%#'.@/
+	let blinks = 1
+	for n in range(1,blinks)
+		let red = matchadd('BlackOnGreen', target_pat, 101)
+		redraw
+		exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+		call matchdelete(red)
+		redraw
+		exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+	endfor
+endfunction
+nnoremap <silent> n n:call HLNext(0.4)<CR> 
+nnoremap <silent> N n:call HLNext(0.4)<CR> 
