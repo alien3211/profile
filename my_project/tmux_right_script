@@ -1,0 +1,4 @@
+#!/bin/bash
+uptime | perl -p -i -e 's/(\s)\1+/$1/g' | perl -p -i -e 's/\s//' | cut -f 3 -d ' ' | perl -p -i -e 's/\n//'
+echo -n " days,"
+uptime | perl -p -i -e 's/(\s)\1+/$1/g' | perl -p -i -e 's/\s//' | cut -f 5 -d ' ' | cut -f 1 -d ',' | perl -p -i -e 's/(\d?):(\d*)/$1 h,$2 min/'

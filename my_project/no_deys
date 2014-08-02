@@ -1,0 +1,1 @@
+uptime | perl -p -e 's/(\s)\1+/$1/g' | perl -p -e 's/\s//' | cut -f 3 -d ' ' | cut -f 1 -d ',' | perl -p -i -e 's/(\d?):(\d*)/$1 h, $2 min/'

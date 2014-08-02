@@ -1,0 +1,40 @@
+#############################################################################
+##
+## .tcshrc.local
+##
+## Author: Simos Xenitellis (simos.lists@googlemail.com)
+##
+## This is the .tcshrc.local file, part of the TCSHRC project
+## at http://tcshrc.sourceforge.net
+##
+## Here you add your aliases, sets, completions and bindkeys that you want
+## to override from the default settings.
+
+unset prompt
+set prompt=""
+### Prompt ####
+if ( $?CVIEW ) then
+    set prompt="$prompt\[%{\e[1;31m%}`ct pwv -short`%{\e[0m%}\]"
+endif
+
+if ( $?ARCRELEASE ) then
+    set prompt="$prompt\[%{\e[1;32m%}$ARCRELEASE%{\e[0m%}\]"
+endif
+set prompt="\
+$prompt\[%{\e[1;36m%}%n@%m%{\e[0m%}\] %{\033[1;32m%}%/%{\033[0m%} %?\
+%B%#%b "
+ 
+ 
+# unset prompt
+# set prompt=""
+# ### Prompt ####
+# if ( $?ARCRELEASE ) then
+#     set prompt="$prompt\[%{\e[1;31m%}`ct pwv -short`%{\e[0m%}\]"
+#     set prompt="$prompt\[%{\e[1;32m%}$ARCRELEASE%{\e[0m%}\]"
+# endif
+# set prompt="\
+# $prompt\[%{\e[1;36m%}%n@%m%{\e[0m%}\] %?\
+# \[%{\033[1;32m%}%~%{\033[0m%}\]%B%#%b "
+ 
+#set prompt="%{\e[32;1m%}%n%{\e[37m%}@%{\e[33m%}%m%{\e[37m%}:%{\e[36m%}%~%{\e[37m%}"\$"%{\e[0m%} "
+#setenv PROMPT "$prompt"

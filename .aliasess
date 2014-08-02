@@ -1,0 +1,13 @@
+alias tmux 'tmux -2'
+alias new_tmux '~/my_project/tmux/./new_develop_session \!:1 ; tmux attach'
+alias irssi 'screen irssi'
+alias grep 'grep --colour=auto'
+alias history 'history | grep -iv "\(history\|exit\|ericsson.se\)"'
+
+alias ls "ls --color"
+alias ll "ls -hlaFq --color --group-directories-first"
+
+alias e "echo"
+alias ne 'nedit'
+alias vi 'vim'
+alias listatest "ps -u `whoami` | grep tcsh | grep -v grep | awk '{print "\$1"}'"
