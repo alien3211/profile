@@ -2,7 +2,6 @@
 tmux new-session -s $1 -n editor -d
 tmux send-keys -t $1 'cd ~/' C-m
 tmux send-keys -t $1 'vim' C-m
-<<<<<<< HEAD
 tmux split-window -h -p 22 -t $1
 tmux split-window -v -p 15 -t $1
 ##tmux select-layout -t $1 main-horizontal
@@ -10,15 +9,6 @@ tmux clock-mode -t $1
 tmux new-window -n dev -t $1
 tmux split-window -h -p 22 -t $1:2
 tmux split-window -v -p 15 -t $1:2
-=======
-tmux split-window -h -p 30 -t $1
-tmux split-window -v -p 25 -t $1
-##tmux select-layout -t $1 main-horizontal
-tmux clock-mode -t $1
-tmux new-window -n dev -t $1
-tmux split-window -h -p 30 -t $1:2
-tmux split-window -v -p 25 -t $1:2
->>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344
 tmux clock-mode -t $1:2
 tmux select-window -t editor
 tmux select-pane -t 1
