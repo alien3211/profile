@@ -57,5 +57,11 @@ source ~/.aliasess
 
 #        commands for interactive shells
 ## FIXME this is an example, shows date and current directory
+<<<<<<< HEAD
 # date
 # pwd
+=======
+date
+pwd
+
+>>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344

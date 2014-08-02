@@ -234,4 +234,9 @@ set visiblebell
 set matchbeep=notunique
 set filec
 unset recexact
+<<<<<<< HEAD
 setenv PYTHONSTARTUP ~/.pythonrc
+=======
+:wa
+
+>>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344

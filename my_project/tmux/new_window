@@ -1,7 +1,12 @@
 #!/bin/bash
 zmienna=`tmux display-message -p '#S'`
 tmux new-window -t $zmienna
+<<<<<<< HEAD
 tmux split-window -h -p 22 -t $zmienna
 tmux split-window -v -p 15 -t $zmienna
+=======
+tmux split-window -h -p 30 -t $zmienna
+tmux split-window -v -p 25 -t $zmienna
+>>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344
 tmux clock-mode -t $zmienna
 tmux select-pane -t 1

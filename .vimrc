@@ -22,7 +22,11 @@ filetype plugin on                " Enable file type plug-ins.
 runtime ftplugin/man.vim	        " Enable plugin man.
 set directory=~/.vim/tmp/swap	    " Directory to swap file.
 helptags ~/.vim/doc		            " Directory to help file.
+<<<<<<< HEAD
 set tags+=~/.vim/tags/cpp_src,./tags,tags,./TAGS,TAGS,~/.vim/commontags,~/.vim/tags/tag,        " ctags all library
+=======
+set tags+=~/.vim/commontags       " ctags all library
+>>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344
 " set hidden
 
 " EnvirConment settings:
@@ -150,6 +154,7 @@ vmap <expr> H	DVB_Drag('left')
 vmap <expr> L	DVB_Drag('right')
 vmap <expr> J	DVB_Drag('down')
 vmap <expr> K	DVB_Drag('up')
+<<<<<<< HEAD
 
 " configuration OmniCppComplete
 map <F3> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -173,3 +178,5 @@ set completeopt=menuone,menu,longest,preview
 
 
 set tags+=./tags
+=======
+>>>>>>> 2bffca51a98e1d9f2550615ad996adef4a8de344
